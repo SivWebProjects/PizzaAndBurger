@@ -1,0 +1,106 @@
+body{
+    background-image: url('MyImages/Background.jpeg');
+}
+
+#burgerPageBody{
+    background-image: url('MyImages/background-burger.jpeg');
+}
+
+.menuSection>h2{
+    font-size: 45px;
+    color: deeppink;
+    text-align: center;
+    animation-name: text;
+    animation-duration: 6s;
+}
+
+@keyframes text{
+    from{text-transform: uppercase; text-align: right;}
+    to{text-transform: capitalize; text-align: center;}
+}
+
+#heading{
+    animation-name: headtext;
+    animation-duration: 8s;
+}
+
+@keyframes headtext{
+    from{text-align: left; color: springgreen; text-shadow: 2px 3px whitesmoke;}
+    to{text-align: center; color: deeppink; text-shadow: none;}
+}
+
+.menuSection>button{
+    font-size: 15px;
+}
+
+.menuDivContainer,.menuDivContainer2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.menuSection img{
+    margin-right: 30px;
+    box-shadow: 2px 3px whitesmoke;
+    border-radius: 20px;
+}
+
+.menuSection p{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    color: black;
+    font-weight: bolder;
+}
+
+@media (max-width: 1000px){
+    .menuDivContainer2{
+        flex-wrap: wrap-reverse;
+    }
+}
+
+.menuSection span{
+    text-align: center;
+    font-size: 25px;
+    color: fuchsia;
+    color: teal;
+    padding-top: 15px;
+}
+
+#regBody{
+    background-image: linear-gradient(hotpink, beige ,honeydew, khaki);
+}
+#regFormPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+}
+#regFormPage>h2{
+    color: teal;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.para{
+    color: teal;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td>span{
+    color: crimson;
+    font-weight:bold;
+    padding: 10px;
+}
+form{
+    background-color: thistle;
+    padding: 20px;
+    margin-bottom: 45px;
+}

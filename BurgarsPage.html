@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <title>Burgers Page</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="put important words of your web page here"> 
+    <meta name="description" content="put short description about your web page">
+    <meta name="author" conent="put author name of this website here">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="MenuPage.css">
+
+</head>
+<body id="burgerPageBody">
+    <div class="homeContainer">
+        <header>
+            <div class="homeDiv">
+                <img src="MyImages/Logo 1.jpeg" alt="Logo">
+                <span>Pizza Burger Food Court</span>
+            </div>
+            <nav class="homeNav">
+                <ul class="homeList">
+                    <li><a href="HomePage.html">HOME</a></li>
+                    <li><a href="RegistrationPage.html">RESERVATION</a></li>
+                    <li><a href="PizzasPage.html">PIZZA</a></li>
+                    <li><a href="BurgarsPage.html">BURGER</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="menuSection">
+            <h2 id="heading">Burgers!</h2>
+            <button class="menuHead" style="font-size: 25px;">Show Non-Veg Burgers</button>
+            <div class="menuDivContainer" style="display: none;">
+                <div class="menuDiv" style="display: none;">
+                    <img src="MyImages/Crispy Chicken Burger.jpeg" width="300" height="300">
+                    <p width="100%">Crispy Chicken Burger - <span>262/-</span></p> 
+                </div>
+                <div class="menuDiv2" style="display: none;">
+                    <img src="MyImages/Flamed Grill Chicken Burger.jpeg" width="300" height="300">
+                    <p width="100%">Flamed Grill Chicken Burger - <span>300/-</span></p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button class="menuHead2">Show Veg Burgers</button>
+            <div class="menuDivContainer2" style="display: none;">
+                <div class="menuDivCon">
+                    <img src="MyImages/Chessy stuffed Burger.jpeg" width="300" height="300">
+                    
+                    <p width="100%">Chessy stuffed Burger - <span>260/-</span></p>
+                </div>
+                <div class="menuDivCon2">
+                    <img src="MyImages/Italian Style Burger.jpeg" width="300" height="300">
+                    <p width="100%">Italian Style Burger - <span>285/-</span></p>
+                </div>
+                <div class="menuDivCon3">
+                    <img src="MyImages/Veggie Supreme Burger.jpeg" width="300" height="300">
+                    <p width="100%">Supreme Veggie Burger - <span>329/-</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="homeFooter">
+            <marquee behavior="scroll">Contact No - +91:7854-552310, Address: Guptha's Square - 2nd Floor, Kottapatnam Road, Nellore.</marquee>
+        </footer>
+    </div>
+
+    <!-- <script src="../JQuery/Library/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $(".menuHead").click(function(){
+                if($('.menuHead').text()=="Show Non-Veg Burgers"){
+                    $('.menuDivContainer').slideDown(3000, function(){
+                        $('.menuDivContainer').css({'height':'350px'});
+                        $('.menuDiv').fadeIn(3000, function(){
+                            $('.menuDiv2').fadeIn(3000, function(){
+                            $('.menuHead').text('Hide Non-Veg Burgers');
+                            });
+                        });
+                    });
+                }
+                else{
+                    $('.menuDivContainer').css({'height':'300px'});
+                    $('.menuDiv').fadeOut(3000, function(){
+                        $('.menuDiv2').fadeOut(3000, function(){
+                            $('.menuDivContainer').slideUp(3000, function(){
+                                $('.menuHead').text('Show Non-Veg Burgers');
+                            });
+                        });
+                    });
+                };
+            });
+            $(".menuHead2").click(function(){
+                if($('.menuHead2').text()=='Show Veg Burgers'){
+                    $('.menuDivContainer2').show(3000, function(){
+                        $('.menuDivContainer2').css({'border':'3px dashed lightgray'});
+                        $('.menuHead2').text('Hide Veg Burgers');
+                    });
+                }
+                else{
+                    $('.menuDivContainer2').css({'border':'none'});
+                    $('.menuDivContainer2').hide(5000, function(){
+                        $('.menuHead2').text('Show Veg Burgers');
+                    });
+                };  
+            });
+        });
+    </script>
+</body>
+</html>

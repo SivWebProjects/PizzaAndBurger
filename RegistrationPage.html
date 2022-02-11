@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <title>Reservation Page</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="put important words of your web page here"> 
+    <meta name="description" content="put short description about your web page">
+    <meta name="author" conent="put author name of this website here">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="MenuPage.css">
+
+</head>
+<body id="regBody">
+    <div class="homeContainer">
+        <header>
+            <div class="homeDiv">
+                <img src="MyImages/Logo 1.jpeg" alt="Logo">
+                <span>Pizza Burger Food Court</span>
+            </div>
+            <nav class="homeNav">
+                <ul class="homeList">
+                    <li><a href="HomePage.html">HOME</a></li>
+                    <li><a href="RegistrationPage.html">RESERVATION</a></li>
+                    <li><a href="PizzasPage.html">PIZZA</a></li>
+                    <li><a href="BurgarsPage.html">BURGER</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="regFormPage">
+            <h2>Reservation</h2>
+            <p class="para">Please fill the below form accurately to serve you better!..</p>
+            <form action="SuccessPage.html" id="form" onsubmit="return formValidate()" novalidate>
+                <table>
+                    <tr>
+                        <td><label for="fname">First Name:</label></td>
+                        <td><input id="fname" onblur="validate1()" required/></td>
+                    </tr>
+                    <tr><td></td><td><span id="error1"></span></td></tr>
+                    <tr>
+                        <td><label for="lname">Last name:</label></td>
+                        <td><input type="text" id="lname" onblur="validate2()" required/></td>
+                    </tr>
+                    <tr><td></td><td><span id="error2"></span></td></tr>
+                    <tr>
+                        <td><label for="age">Age:</label> </td>
+                        <td><input type="number" id="age" onblur="validate3()"/></td>
+                    </tr>
+                    <tr><td></td><td><span id="error3"></span></td></tr>
+                    <tr>
+                        <td><label for="mobnum">Phone Number:</label></td>
+                        <td><input type="tel" id="mobnum" onblur="validate4()" required/></td>
+                    </tr>
+                    <tr><td></td><td><span id="error4"></span></td></tr>
+                    <tr>
+                        <td><label for="emailId">Email ID:</label></td>
+                        <td><input type="email" id="emailId" onblur="validate5()" required/></td>
+                    </tr>
+                    <tr><td></td><td><span id="error5"></span></td></tr>
+                    <tr>
+                        <td><label for="noguests">Number of Guests:</label></td>
+                        <td><input type="number" id="noguests" onblur="validate6()"  required/></td>
+                    </tr>
+                    <tr><td></td><td id="passtd"><span id="error6"></span></td></tr>
+                    <tr>
+                        <td><label>Reservation Type:</label></td>
+                        <td><label><input type="radio" id="restype1" name="restype" value="morning" checked/>Morning</label></td>
+                        <td><label><input type="radio" id="restype2" name="restype" value="afternoon"/>Afternoon</label></td>
+                        <td><label><input type="radio" id="restype3" name="restype" value="evening"/>Evening</label></td>
+                        <td><label><input type="radio" id="restype4" name="restype" value="night"/>Night</label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Date:</label></td>
+                        <td><input type="date" id="date" min="2022-02-11" onblur="validate7()" required/></td>
+                    </tr>
+                    <tr><td></td><td><span id="error7"></span></td></tr>
+                    <tr>
+                        <td><label for="time">Time</label></td>
+                        <td><input type="time" id="time" min="09:00" max="20:00" onblur="validate8()" required/></td>
+                    </tr>
+                    <tr><td></td><td><span id="error8"></span></td></tr>
+                    <tr><td></td><td><input type="submit"/>
+                                 <input type="reset" /></td></tr>
+                </table>
+            </form>
+        
+        
+            <footer class="homeFooter">
+                <marquee behavior="scroll">Contact No - +91:7854-552310, Address: Guptha's Square - 2nd Floor, Kottapatnam Road, Nellore.</marquee>
+            </footer>
+    </div>
+
+    <script src="ValidationPage.js"></script>
+</body>
+</html>
+
+

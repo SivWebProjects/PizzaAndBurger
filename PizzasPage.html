@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <title>Pizzas Page</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="put important words of your web page here"> 
+    <meta name="description" content="put short description about your web page">
+    <meta name="author" conent="put author name of this website here">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="MenuPage.css">
+    <!--<link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script> -->
+        <!-- ImagesFolder -->
+</head>
+<body>
+    <div class="homeContainer">
+        <header>
+            <div class="homeDiv">
+                <img src="MyImages/Logo 1.jpeg" alt="Logo">
+                <span>Pizza Burger Food Court</span>
+            </div>
+            <nav class="homeNav">
+                <ul class="homeList">
+                    <li><a href="HomePage.html">HOME</a></li>
+                    <li><a href="RegistrationPage.html">RESERVATION</a></li>
+                    <li><a href="PizzasPage.html">PIZZA</a></li>
+                    <li><a href="BurgarsPage.html">BURGER</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="menuSection">
+            <h2>Regular Pizzas!</h2>
+            <button class="menuHead">Show Non-Veg Pizzas</button>
+            <div class="menuDivContainer">
+                <div class="menuDiv" style="display:none;">
+                    <img src="MyImages/Non veg Loaded.png" width="300" height="300">
+                    <p>Non Veggie Loaded Pizza - <span>299/-</span></p>
+                </div>
+                <div class="menuDiv2" style="display:none;">
+                    <img src="MyImages/Chicken Pepperoni.png" width="300" height="300">
+                    <p>Chicken Pepperoni Pizza - <span>319/-</span></p>
+                </div>
+                <div class="menuDiv3" style="display:none;">
+                    <img src="MyImages/Chicken Dominator.jpeg" width="300" height="300">
+                    <p>Chicken Dominator Pizza - <span>349/-</span></p> 
+                </div>
+                <div class="menuDiv4" style="display:none;">
+                    <img src="MyImages/Chicken golden delight.jpeg" width="300" height="300">
+                    <p>Chicken Golden Delight Pizza - <span>450/-</span></p>
+                </div>
+            </div>
+
+            <button class="menuHead2">Show Veg Pizzas</button>
+            <div class="menuDivContainer2" style="display:none;">
+                <div>
+                    <img src="MyImages/Mexican Green Wave.jpeg" width="300" height="300">
+                    <p>Mexican Green Wave Pizza - <span>239/-</span></p>
+                </div>
+                <div>
+                    <img src="MyImages/Veggie Paradise.jpeg" width="300" height="300">
+                    <p>Veggie Paradise Pizza - <span>260/-</span></p>
+                </div>
+                <div>
+                    <img src="MyImages/peppy paneer.jpeg" width="300" height="300">
+                    <p>Peppy Paneer Pizza - <span>385/-</span></p>
+                </div>
+                <div>
+                    <img src="MyImages/Deluxe Veggie.jpeg" width="300" height="300">
+                    <p>Veggie Deluxe Pizza - <span>450/-</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="homeFooter">
+            <marquee behavior="scroll">Contact No - +91:7854-552310, Address: Guptha's Square - 2nd Floor, Kottapatnam Road, Nellore.</marquee>
+        </footer>
+    </div>
+
+    <!-- <script src="../JQuery/Library/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $(".menuHead").click(function(){
+                //let a=1;
+                //let ele="pizzaDiv"+toString(a);
+                if($('.menuHead').text()=='Show Non-Veg Pizzas'){
+                    $('.menuDiv').fadeIn(2000, function(){
+                        $('.menuDiv2').fadeIn(3000, function(){
+                            $('.menuDiv3').fadeIn(4000, function(){
+                                $('.menuDiv4').fadeIn(5000, function(){
+                                    $('.menuHead').text('Hide Non-Veg Pizzas');
+                                });
+                            });
+                        });
+                    });
+                }
+                else{
+                    $('.menuDiv').fadeOut(2000, function(){
+                        $('.menuDiv2').fadeOut(3000, function(){
+                            $('.menuDiv3').fadeOut(4000, function(){
+                                $('.menuDiv4').fadeOut(5000, function(){
+                                    $('.menuHead').text('Show Non-Veg Pizzas');
+                                });
+                            });
+                        });
+                    });
+                } 
+            });
+
+            $(".menuHead2").click(function(){
+                if($('.menuHead2').text()=='Show Veg Pizzas'){
+                    $('.menuDivContainer2').slideDown(4000, function(){
+                        $('.menuHead2').animate({'font-size':'22px'}, 3000, function(){
+                            $('.menuHead2').text('Hide Veg Pizzas');
+                            $('.menuHead2').css({'color':'darkkhaki'});
+                        })         
+                    });
+                }
+                else{
+                    $('.menuDivContainer2').slideUp(5000, function(){
+                        $('.menuHead2').animate({'font-size':'25px'}, 3000, function(){
+                            $('.menuHead2').text('Show Veg Pizzas');
+                            $('.menuHead2').css({'color':'dimgrey'});
+                        })
+                    });
+                } 
+            }); // 
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- <i class="fa-solid fa-burger"></i>
+    <i class="fa-solid fa-pizza-slice"></i>
+    <span id="homeSpan2"><i class="fa-regular fa-copyright"></i></span> 
+-->
